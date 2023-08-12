@@ -21,6 +21,13 @@ jobs:
         echo Mais Informação
       displayName: 'Run a multi-line script'
   - job: Job2
+    dependsOn: Job1
     steps:
-    - script: echo Hello, HELLO, JOB2!
+    - script: echo HELLO, Hello, JOB2!
       displayName: 'Run a one-line JOB2 script'
+  - job: Job3
+    dependsOn: Job2
+    steps:
+    - script: |
+        echo "Hello, JOB3!
+      displayName: 'Run a multi-line Job3 script'
