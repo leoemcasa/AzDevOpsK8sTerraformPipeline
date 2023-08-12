@@ -29,5 +29,5 @@ jobs:
     dependsOn: Job2
     steps:
     - script: |
-        echo "Hello, JOB3!
+        echo "Hello, JOB3!"
       displayName: 'Run a multi-line Job3 script'
