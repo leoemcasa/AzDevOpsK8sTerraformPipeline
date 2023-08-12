@@ -31,3 +31,11 @@ jobs:
     - script: |
         echo "Hello, JOB3!"
       displayName: 'Run a multi-line Job3 script'
+  - job: Job4
+    dependsOn:
+    - Job1
+    - Job3
+    steps:
+    - script: |
+        echo "Hello, JOB3!"
+      displayName: 'Run a multi-line Job3 script'
