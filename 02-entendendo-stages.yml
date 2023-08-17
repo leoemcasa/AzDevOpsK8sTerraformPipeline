@@ -14,22 +14,22 @@ stages:
   - job: Job2
     steps:
     - bash: echo Build Job2
-- stage: DevDeploy
-  variables:
-    environment: Dev
-  dependsOn: Build
-  jobs:
-  - job: DevDeployJob
-    steps:
-    - bash: echo $(environment)Deploy Job
-- stage: QADeploy
-  dependsOn: Build
-  jobs:
-  - job: QADeployJob
-    steps:
-    - bash: echo QA Deploy Job
-- stage: ProdDeploy
-  jobs:
-  - job: ProdDeployJob
-    steps:
-    - bash: echo Prod Deploy Job
+# - stage: devdeploy
+#   variables:
+#     environment: dev
+#   dependson: build
+#   jobs:
+#   - job: devdeployjob
+#     steps:
+#     - bash: echo $(environment)deploy job
+# - stage: qadeploy
+#   dependson: build
+#   jobs:
+#   - job: qadeployjob
+#     steps:
+#     - bash: echo qa deploy job
+# - stage: proddeploy
+#   jobs:
+#   - job: proddeployjob
+#     steps:
+#     - bash: echo prod deploy job
