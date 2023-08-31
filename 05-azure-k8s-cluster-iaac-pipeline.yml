@@ -26,11 +26,7 @@ steps:
     backendAzureRmContainerName: 'storageaccountleosalcotf'
     backendAzureRmKey: 'k8s-dev.tfstate'
 
-- task: TerraformCLI@0
-  inputs:
-    command: 'apply'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/configuration/iaac/azure/kubernetes'
-    commandOptions: 'force-unlock'
+bash: terraform force-unlock
 
 # - task: TerraformCLI@0
 #   inputs:
