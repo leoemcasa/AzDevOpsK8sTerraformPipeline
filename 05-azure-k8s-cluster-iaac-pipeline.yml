@@ -26,8 +26,8 @@ steps:
     backendAzureRmContainerName: 'storageaccountleosalcotf'
     backendAzureRmKey: 'k8s-dev.tfstate'
 
-- script: cd $(System.DefaultWorkingDirectory)/configuration/iaac/azure/kubernetes
-- script: terraform state list
+- script: find $(System.DefaultWorkingDirectory) tfstate
+# - script: terraform state list
 
 # - task: TerraformCLI@0
 #   inputs:
