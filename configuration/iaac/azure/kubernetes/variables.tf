@@ -11,7 +11,7 @@ variable location {
 }
 
 variable node_count {
-  default = 0
+  default = 1
 }
 
 
