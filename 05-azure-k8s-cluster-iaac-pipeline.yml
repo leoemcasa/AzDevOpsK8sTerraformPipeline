@@ -32,7 +32,7 @@ steps:
 #         terraform state list
 # - script: find $(System.DefaultWorkingDirectory) -name *.tfstate
 - script: cd $(System.DefaultWorkingDirectory)/configuration/iaac/azure/kubernetes/.terraform
-- script: terraform state list
+- script: pwd && ls -lah
 
 # - task: TerraformCLI@0
 #   inputs:
